@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9926a103-fd63-4f5f-9130-5749e5bde0f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/final/settings.py" afterPath="$PROJECT_DIR$/final/settings.py" />
-      <change beforePath="$PROJECT_DIR$/measurements/admin.py" afterPath="$PROJECT_DIR$/measurements/admin.py" />
-      <change beforePath="$PROJECT_DIR$/measurements/models.py" afterPath="$PROJECT_DIR$/measurements/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -323,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525204063102</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updating Admin console page">
+      <created>1525207139060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525207139060</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
