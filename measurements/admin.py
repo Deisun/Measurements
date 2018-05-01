@@ -4,7 +4,9 @@ from .models import Area, Category, Location
 
 class AreaAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields' : ['area'] } ),
+        (None, {'fields' : ['name'] } ),
+        (None, {'fields' : ['longitude']}),
+        (None, {'fields' : ['latitude']}),
         ]
 
 

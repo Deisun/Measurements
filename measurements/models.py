@@ -4,8 +4,8 @@ from django.utils import timezone
 
 class Area(models.Model):
     name = models.CharField(max_length=200)
-    longitude = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
-    latitude = models.DecimalField(max_digits=8, decimal_places=3, default=0)
+    longitude = models.DecimalField(max_digits=6, decimal_places=6, blank=True, null=True)
+    latitude = models.DecimalField(max_digits=6, decimal_places=6, blank=True, null=True)
 
     def number_of_locations(self):
         # TODO implement this method
@@ -34,7 +34,7 @@ class Location(models.Model):
 
 
 class Measurement(models.Model):
-    value = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
+    value = models.DecimalField(max_digits=6, decimal_places=6, blank=True, null=True)
     date = models.DateTimeField(blank=True, null=True)
     location = models.ForeignKey('Location', on_delete=models.CASCADE)
 
