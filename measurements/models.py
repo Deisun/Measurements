@@ -1,9 +1,11 @@
+import datetime
 from django.db import models
+from django.utils import timezone
 
 class Area(models.Model):
     name = models.CharField(max_length=200)
-    longitude = models.FloatField()
-    latitude = models.FloatField()
+    longitude = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
+    latitude = models.DecimalField(max_digits=8, decimal_places=3, default=0)
 
     def number_of_locations(self):
         # TODO implement this method
@@ -24,7 +26,7 @@ class Area(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length=200)
-    altitude = models.IntegerField()
+    altitude = models.IntegerField(blank=True, null=True)
     area = models.ForeignKey('Area', on_delete=models.CASCADE)
 
     def __str__(self):
@@ -32,8 +34,8 @@ class Location(models.Model):
 
 
 class Measurement(models.Model):
-    value = models.FloatField()
-    date = models.DateField()
+    value = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
+    date = models.DateTimeField(blank=True, null=True)
     location = models.ForeignKey('Location', on_delete=models.CASCADE)
 
     def __str__(self):
@@ -42,7 +44,7 @@ class Measurement(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
     members = models.ManyToManyField('Area')
 
     def __str__(self):
