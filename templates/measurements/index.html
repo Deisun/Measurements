@@ -1,0 +1,30 @@
+<h1>List of Areas</h1>
+<br>
+
+
+
+
+{% if area_list %}
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Number of Locations</th>
+            <th>Average Measurement</th>
+            <th>Categories</th>
+        </tr>
+
+        {% for area in area_list %}
+            <tr align="center">
+                <td>{{ area.id }}</td><td>{{ area.name }}</td><td>{{ area.number_of_locations }}</td><td>{{ area.average_measurements }}</td><td>{{ area.category_names }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+{% else %}
+    <p>No areas available.</p>
+{% endif %}
