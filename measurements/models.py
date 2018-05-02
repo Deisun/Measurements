@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from django.db.models import Count
 
 class Area(models.Model):
     name = models.CharField(max_length=200)
@@ -7,9 +8,10 @@ class Area(models.Model):
     latitude = models.FloatField(blank=True, null=True)
 
     def number_of_locations(self):
-        pass
+        return self.location_set.count()
 
     def average_measurements(self):
+        Area.objects.annotate(avg_measurement='Area__Location__Measurement')
         # TODO implement this method
         pass
 

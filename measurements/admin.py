@@ -1,13 +1,15 @@
 from django.contrib import admin
-from .models import Area, Category, Location
+from .models import Area, Category, Location, Measurement
 
 class LocationInLine(admin.TabularInline):
     model = Location
 
+class MeasurementInLine(admin.TabularInline):
+    model = Measurement
+
 
 class AreaAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields' : ['id']}),
         (None, {'fields' : ['name']}),
         (None, {'fields' : ['longitude']}),
         (None, {'fields' : ['latitude']}),
@@ -17,11 +19,20 @@ class AreaAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    fieldsets = [
+        (None, {'fields': ['name']}),
+    ]
+
+    filter_horizontal = ('members',)
 
 class LocationAdmin(admin.ModelAdmin):
-    pass
+    fieldsets = [
+        (None, {'fields': ['name']}),
+        (None, {'fields': ['altitude']}),
+        (None, {'fields' : ['area']}),
+    ]
 
+    inlines = [MeasurementInLine]
 
 
 
