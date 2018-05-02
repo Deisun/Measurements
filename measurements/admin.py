@@ -22,8 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['name']}),
     ]
-
-    filter_horizontal = ('members',)
+    # TODO implement filter_vertical
 
 class LocationAdmin(admin.ModelAdmin):
     fieldsets = [
