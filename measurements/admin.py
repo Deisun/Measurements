@@ -19,10 +19,8 @@ class AreaAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None, {'fields': ['name']}),
-    ]
-    # TODO implement filter_vertical
+    filter_vertical = ('members',)
+    fields = ['name', 'members', 'description']
 
 class LocationAdmin(admin.ModelAdmin):
     fieldsets = [
