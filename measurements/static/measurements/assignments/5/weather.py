@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 apiID = '7cca7713d1b5bf4693151f6e60115da9'
-zipCode = 30144
+zipCode = 30060
 
 
 
