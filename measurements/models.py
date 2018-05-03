@@ -11,15 +11,12 @@ class Area(models.Model):
         return self.location_set.count()
 
     def average_measurements(self):
-
-        # TODO implement this method
-        pass
+        result = self.location_set.aggregate(average=Avg('measurement__value'))
+        return result
 
     def category_names(self):
         queryset = self.category_set.all()
-        return queryset
-        # TODO implement this method
-        pass
+        return queryset.values('name')
 
     def __str__(self):
         return self.name

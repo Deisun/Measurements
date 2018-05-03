@@ -18,7 +18,26 @@
 
         {% for area in area_list %}
             <tr align="center">
-                <td>{{ area.id }}</td><td>{{ area.name }}</td><td>{{ area.number_of_locations }}</td><td>{{ area.average_measurements }}</td><td>{{ area.category_names }}</td>
+                <td>{{ area.id }}</td><td>{{ area.name }}</td><td>{{ area.number_of_locations }}</td>
+
+                <td>
+                    {% if area.average_measurements.average %}
+                        {{ area.average_measurements.average |floatformat:3 }}
+                    {% else %}
+                        ------
+                    {% endif %}
+                </td>
+
+                <td>
+                      {% for category in area.category_names %}
+                          {% if not forloop.last %}
+                                {{ category.name }} ,
+                          {% else %}
+                                {{ category.name }}
+                          {% endif %}
+
+                      {% endfor %}
+                </td>
             </tr>
 
         {% endfor %}
