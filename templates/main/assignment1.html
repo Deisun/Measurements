@@ -1,10 +1,11 @@
+{% load static %}
 <!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
   <title>Robert Douma - Portfolio</title>
 
@@ -28,7 +29,7 @@
 	</header>
 
 
-		<img src="img_1124.jpg" id="profile_pic">
+		<img src="{% static 'img/img_1124.jpg' %}" id="profile_pic">
 		<div id="about_me">
 			<p>I currently work as a Network Admin for a Biopharmaceutical company.  My interest right now is pursing a Software Devopment position.  I'm particularly looking for web development and/or mobile app development.  I have a strong background in programming in multiple languages including C++, Java, Go, PHP, HTML, and CSS</p>
 			<p>My goals in the next 5 years are to become proficient at programming and pursue a career in the field.  I look forward to achieving a Computer Science degree at Kennesaw State University.</p>

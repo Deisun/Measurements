@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
 from .models import Area
 
 def index(request):
@@ -7,7 +6,3 @@ def index(request):
     context = { 'area_list' : area_list, }
     return render(request, 'measurements/index.html',context)
 
-
-
-def final(request):
-    return HttpResponse("this is the final page")
