@@ -19,7 +19,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('assignment1/', views.assignment1, name='assignment1'),
+    path('assignment3/', views.assignment3, name='assignment3'),
     path('assignment2/', views.assignment2, name='assignment2'),
     path('assignment5/', views.assignment5, name='assignment5'),
     path('measurements/', include('measurements.urls')),

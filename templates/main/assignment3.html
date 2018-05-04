@@ -1,0 +1,51 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  	<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %} ">
+  	<link rel="stylesheet" type="text/css" href="{% static 'css/typebase.css' %}">
+   	<link rel="stylesheet" type="text/css" href="{% static 'assignment3/css/style.css' %}">
+
+
+  <title>Robert Douma - Portfolio</title>
+
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="contentBox">
+
+			<form>
+				Input <span>Length</span>
+				<br>
+				<ul id="textBoxList">
+					<!-- textboxes to go here  -->
+				</ul>
+
+
+
+				<br>
+				<button type="button" onclick="addTextBox()">Add Cell</button>
+				<button type="button" onclick="removeTextBox()">Remove Cell</button>
+				<button type="button" onclick="sortTextBox()">Sort</button>
+
+			</form>
+
+
+
+
+
+		</div>
+
+
+	</div>
+
+
+  <script src="{% static 'assignment3/js/scripts.js' %}"></script>
+</body>
+</html>
