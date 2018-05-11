@@ -2,6 +2,7 @@ import datetime
 from django.db import models
 from django.db.models import Avg
 
+
 class Area(models.Model):
     name = models.CharField(max_length=200)
     longitude = models.FloatField(blank=True, null=True)
@@ -20,7 +21,6 @@ class Area(models.Model):
 
     def __str__(self):
         return self.name
-
 
 
 class Location(models.Model):
